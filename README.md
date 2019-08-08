@@ -1,14 +1,14 @@
 ### Problem:
 
-There is a list of 4 things: Name, Product, Activity, Time. Activity contains three activities: View, Add to cart (ATC) and Buy.
-Name contains the names of the people involved with a particular product and Time contains the time corresponding to that activity,
+There is a list of 4 things given: Name, Product, Activity, Time. Activity contains three activities: View, Add to cart (ATC) and Buy.
+Name contains the names of the people with a particular product and Time contains the time corresponding to every activity.
 
-The ideal flow of the activity is:
-1, View
+The ideal workflow is the following:
+1. View
 2. Add to Cart
 3. Buy
 
-The problem is to find out if the given list, for every person and product, if the ideal flow is followed or not.
+The problem is to find out if the given list, for every person and product, follows the ideal workflow or not.
 I print 'True' if it follows, and 'False' if it does not follow.
 
 
@@ -26,14 +26,14 @@ In the if-else statement, I am checking if the dictionary already has values cor
 If it does, I append the current value to the already existing key, if not I add the value to the new key in the dictionary d.
 
 
-###### 2. Make a class
+###### 2. Make a list of time:
 
-I made a class called find_workflows_adhering() to find if the workflow is followed. if my Activity corresponded to the activity n the ruleset, for a given Name and Product, I add it to the list of time. At the end of this step I will have the times corresponding to every Activity in order.
+I made a class called find_workflows_adhering() to find if the workflow is followed. If my Activity resembles the activity in the ruleset, for a given Name and Product, I add the corresponding time to the list of time that I entend to make. At the end of this step I will have the times corresponding to every Activity in order.
 
 
 ###### 3. Comparing time:
 
-From the list of times of activities I compare every element with the next element. Every element must be lkess than the element next it, implying that the corresponding Activity has occured before the Activity corresponding toi the next time. As long as this follows, the print will give true, else, false.
+From the list of times of activities, I compare every element with the next element. Every element must be less than the element next to it, implying that the current Activity has occured before the Activity right after it. As long as this follows, the print will give 'True', else I print 'False'.
 
 Another method of doing this is checking if the list of Time called timePeriods in this case is equal to the sorted(timePeriods), since sorted() gives the increasing order of the numerical or alphabetical data.
 
