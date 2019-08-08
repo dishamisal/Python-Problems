@@ -27,7 +27,14 @@ If it does, I append the current value to the already existing key, if not I add
 
 #2. Make a class:#
 
-I made a class called find_workflows_adhering() to find if the workflow is followed.
+I made a class called find_workflows_adhering() to find if the workflow is followed. if my Activity corresponded to the activity n the ruleset, for a given Name and Product, I add it to the list of time. At the end of this step I will have the times corresponding to every Activity in order.
+
+
+#3. Comparing time:
+
+From the list of times of activities I compare every element with the next element. Every element must be lkess than the element next it, implying that the corresponding Activity has occured before the Activity corresponding toi the next time. As long as this follows, the print will give true, else, false.
+
+Another method of doing this is checking if the list of Time called timePeriods in this case is equal to the sorted(timePeriods), since sorted() gives the increasing order of the numerical or alphabetical data.
 
 
 
