@@ -1,4 +1,4 @@
-##Problem:##
+##Problem:
 
 There is a list of 4 things: Name, Product, Activity, Time. Activity contains three activities: View, Add to cart (ATC) and Buy.
 Name contains the names of the people involved with a particular product and Time contains the time corresponding to that activity,
@@ -12,7 +12,7 @@ The problem is to find out if the given list, for every person and product, if t
 I print 'True' if it follows, and 'False' if it does not follow.
 
 
-##Solution:##
+##Solution:
 
 I am dividing this problem into three parts:
 
@@ -25,7 +25,7 @@ value: [(activity, time)]
 In the if-else statement, I am checking if the dictionary already has values corresponding to the current key.
 If it does, I append the current value to the already existing key, if not I add the value to the new key in the dictionary d.
 
-#2. Make a class:#
+#2. Make a class
 
 I made a class called find_workflows_adhering() to find if the workflow is followed. if my Activity corresponded to the activity n the ruleset, for a given Name and Product, I add it to the list of time. At the end of this step I will have the times corresponding to every Activity in order.
 
