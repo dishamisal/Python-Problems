@@ -1,0 +1,82 @@
+# Write a Vehicle class with Car and Bike sub-classes. It should have common functionality like start, stop, move and specific functionality like attributes, wheels.
+# Make some of these attributes static: like wheels, seating capacity, etc. Make a class person and add 2 folks to it.
+# The guy owns a bike and the girl owns a scooty along with a car. Instantiate these objects and all necessary attributes.
+# Finally, use the functions start, move, stop for each of the person. Use both car and scooty for the girl.
+# Can use print statements inside these methods to print status. Ensure 'Vehicle' class has these methods, and are overriden in Car and Bike accordingly.
+# (bike also handles scooty)
+
+
+class vehicle:
+    def __init__(self):
+        print("vehicle")
+
+    def start(self):
+        print("Vehicle can start")
+    def stop(self):
+        print("Vehicle can stop")
+    def move(self):
+        print("Vehicle can move")
+    def wheels(self):
+        print("Vehicle has wheels")
+
+class car:
+    def __init__(vehicle):
+        print("car")
+
+    def start(self):
+        print("Car can start")
+    def stop(self):
+        print("Car can stop")
+    def move(self):
+        print("Car can move")
+
+class bike:
+    def __init__(vehicle):
+        print("bike")
+
+    def start(self):
+        print("Bike can start")
+    def stop(self):
+        print("Bike can stop")
+    def move(self):
+        print("Bike can move")   
+
+
+# a = car()
+# a.start()
+# a.stop()
+# a.move()
+# a.wheels()
+
+x = vehicle("Name")
+y = bike("Boy")
+z = car("Girl")
+
+print(y, type(y))
+y.start()
+
+
+#Vehicle is the parent class
+
+class Vehicle:
+    def __init__(self, type, wheels=False):
+        self.type = type
+        self.wheels = wheels
+
+    def start(self):
+        print("The vehicle is starting")
+    def stop(self):
+        print("The vehicle is stopping")
+    def move(self):
+        print("The vehicle is moving")
+
+# Bike is a child class
+
+class Bike(Vehicle):
+    pass
+
+class Car(Vehicle):
+    pass
+user = Car("Boy")
+# print(user.type + " " + user.wheels)
+print(user.type)
